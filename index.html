@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ElectroEcuador: calculadoras eléctricas, fórmulas, ejercicios resueltos y guías de electricidad para estudiantes y técnicos.">
+  <meta name="theme-color" content="#0b1728">
+  <title>ElectroEcuador | Aprende y calcula electricidad</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="ElectroEcuador, inicio"><span class="brand-icon">⚡</span><span>Electro<span class="brand-accent">Ecuador</span><small>Electricidad explicada fácil</small></span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰ <span class="sr-only">Abrir menú</span></button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#calculadoras">Calculadoras</a>
+        <a href="#aprende">Aprende</a>
+        <a href="#instalaciones">Instalaciones</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="paginas/contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">CONOCIMIENTO ELÉCTRICO PARA TODOS</p>
+          <h1>La electricidad, <span>más fácil de entender.</span></h1>
+          <p class="hero-text">Calcula, aprende y resuelve problemas eléctricos con herramientas prácticas y explicaciones paso a paso.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#calculadoras">Usar calculadoras <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="#aprende">Explorar recursos</a>
+          </div>
+          <div class="hero-note"><span class="pulse-dot"></span> Recursos para estudiantes y técnicos en Ecuador</div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración decorativa de un circuito eléctrico" role="img">
+          <div class="circuit-ring ring-one"></div><div class="circuit-ring ring-two"></div>
+          <div class="bolt">ϟ</div><span class="node node-a"></span><span class="node node-b"></span><span class="node node-c"></span>
+          <div class="art-label label-top">V = I × R</div><div class="art-label label-bottom">P = V × I</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calculadoras">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">HERRAMIENTAS GRATUITAS</p><h2>Calculadoras eléctricas</h2></div><p>Introduce los valores conocidos y calcula el resultado al instante.</p></div>
+        <div class="calculator-grid">
+          <article class="calculator-card">
+            <div class="card-icon">∿</div><h3>Ley de Ohm</h3><p>Calcula voltaje, corriente o resistencia con dos valores conocidos.</p>
+            <form id="ohm-form" class="calc-form">
+              <label for="ohm-mode">¿Qué deseas calcular?</label>
+              <select id="ohm-mode"><option value="voltage">Voltaje (V)</option><option value="current">Corriente (A)</option><option value="resistance">Resistencia (Ω)</option></select>
+              <label for="ohm-a" id="ohm-a-label">Corriente (A)</label><input id="ohm-a" type="number" step="any" min="0" placeholder="Ej. 2" required>
+              <label for="ohm-b" id="ohm-b-label">Resistencia (Ω)</label><input id="ohm-b" type="number" step="any" min="0" placeholder="Ej. 12" required>
+              <button class="btn btn-primary btn-full" type="submit">Calcular resultado</button>
+              <output id="ohm-result" class="result" aria-live="polite">Tu resultado aparecerá aquí.</output>
+            </form>
+          </article>
+          <article class="calculator-card">
+            <div class="card-icon">ϟ</div><h3>Potencia eléctrica</h3><p>Obtén la potencia y una estimación del consumo mensual.</p>
+            <form id="power-form" class="calc-form">
+              <label for="power-voltage">Voltaje (V)</label><input id="power-voltage" type="number" step="any" min="0" placeholder="Ej. 120" required>
+              <label for="power-current">Corriente (A)</label><input id="power-current" type="number" step="any" min="0" placeholder="Ej. 5" required>
+              <label for="power-hours">Horas de uso al día (opcional)</label><input id="power-hours" type="number" step="any" min="0" max="24" placeholder="Ej. 4">
+              <button class="btn btn-primary btn-full" type="submit">Calcular potencia y consumo</button>
+              <output id="power-result" class="result" aria-live="polite">Tu resultado aparecerá aquí.</output>
+            </form>
+          </article>
+          <article class="calculator-card">
+            <div class="card-icon">⎓</div><h3>Resistencias en serie y paralelo</h3><p>Calcula la resistencia equivalente de varios resistores.</p>
+            <form id="series-form" class="calc-form">
+              <label for="resistors">Resistencias (Ω), separadas por comas</label><input id="resistors" type="text" placeholder="Ej. 10, 20, 30" required>
+              <label for="connection-type">Tipo de conexión</label><select id="connection-type"><option value="series">En serie</option><option value="parallel">En paralelo</option></select>
+              <button class="btn btn-primary btn-full" type="submit">Calcular resistencia equivalente</button>
+              <output id="series-result" class="result" aria-live="polite">Tu resultado aparecerá aquí.</output>
+            </form>
+          </article>
+        </div>
+        <p class="small-note">Estas calculadoras son herramientas educativas. Verifica los resultados y las condiciones reales de la instalación antes de tomar decisiones técnicas.</p>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="aprende">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">BIBLIOTECA TÉCNICA</p><h2>Aprende electricidad paso a paso</h2></div><p>La base para comprender circuitos, magnitudes y cálculos eléctricos.</p></div>
+        <div class="resource-grid">
+          <article class="resource-card"><div class="resource-emoji">📘</div><p class="tag">FUNDAMENTOS</p><h3>Magnitudes eléctricas básicas</h3><p>Comprende voltaje, corriente, resistencia y potencia, con sus unidades y ejemplos.</p><a href="paginas/magnitudes-electricas.html" class="text-link">Leer guía <span>→</span></a></article>
+          <article class="resource-card"><div class="resource-emoji">🧮</div><p class="tag">EJERCICIOS</p><h3>Ley de Ohm con ejemplos</h3><p>Aprende a despejar la fórmula y resolver problemas paso a paso.</p><a href="paginas/ley-de-ohm.html" class="text-link">Leer guía <span>→</span></a></article>
+          <article class="resource-card"><div class="resource-emoji">🛡️</div><p class="tag">SEGURIDAD</p><h3>Principios de seguridad eléctrica</h3><p>Conoce las precauciones básicas antes de trabajar cerca de instalaciones eléctricas.</p><a href="paginas/seguridad-electrica.html" class="text-link">Leer guía <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="sobre-mi">
+      <div class="container about-card">
+        <div class="about-avatar" aria-hidden="true">D</div>
+        <div class="about-copy">
+          <p class="eyebrow">QUIÉN ESTÁ DETRÁS DE ELECTROECUADOR</p>
+          <h2>Davor Antonio Vásquez Cabezas</h2>
+          <p class="about-location">Estudiante de la Universidad Técnica Luis Vargas Torres de Esmeraldas · Esmeraldas, Ecuador</p>
+          <p>¡Hola! Creé ElectroEcuador para compartir conocimientos sobre electricidad y facilitar el aprendizaje de estudiantes, técnicos y personas interesadas en esta área. Aquí encontrarás calculadoras eléctricas, explicaciones de fórmulas, ejercicios resueltos y guías prácticas para comprender los principios de la electricidad de una manera sencilla.</p>
+          <p>Mi objetivo es seguir aprendiendo, compartir conocimientos y contribuir a que más personas puedan estudiar electricidad de forma práctica, accesible y responsable.</p>
+          <p class="about-motto">ElectroEcuador: aprendiendo electricidad, paso a paso.</p>
+          <a class="text-link" href="paginas/sobre-nosotros.html">Conoce más sobre el proyecto →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="instalaciones">
+      <div class="container install-banner">
+        <div><p class="eyebrow">APLICACIÓN PRÁCTICA</p><h2>Instalaciones eléctricas con criterio y seguridad</h2><p>Publicaremos guías educativas sobre conductores, protecciones, circuitos residenciales y buenas prácticas, tomando en cuenta la normativa aplicable en Ecuador.</p></div>
+        <div class="install-symbol" aria-hidden="true">⌁<span>⚡</span>⌁</div>
+      </div>
+    </section>
+
+    <section class="newsletter section-muted">
+      <div class="container newsletter-inner"><div><p class="eyebrow">NUEVOS RECURSOS</p><h2>Una comunidad que aprende haciendo</h2><p>Estamos preparando más calculadoras, guías y ejercicios para el aprendizaje eléctrico.</p></div><a class="btn btn-primary" href="paginas/contacto.html">Contactar con nosotros</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><span class="brand-icon">⚡</span><span>Electro<span class="brand-accent">Ecuador</span><small>Electricidad explicada fácil</small></span></a><p class="footer-description">Recursos educativos de electricidad para aprender, practicar y calcular.</p></div>
+      <div><h3>Explorar</h3><a href="#calculadoras">Calculadoras</a><a href="#aprende">Guías educativas</a><a href="#instalaciones">Instalaciones</a></div>
+      <div><h3>Información</h3><a href="paginas/sobre-nosotros.html">Sobre nosotros</a><a href="paginas/privacidad.html">Política de privacidad</a><a href="paginas/contacto.html">Contacto</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> ElectroEcuador · Davor Vásquez · Esmeraldas, Ecuador.</span><span>Contenido educativo; trabaja siempre con seguridad.</span></div>
+  </footer>
+</body>
+</html>
