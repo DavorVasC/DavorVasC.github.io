@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende a diferenciar circuitos eléctricos en serie y paralelo con ejemplos, fórmulas y ejercicios resueltos.">
+  <title>Circuitos en serie y paralelo | ElectroEcuador</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .guia { max-width: 1000px; margin: 0 auto; padding: 32px 20px 60px; line-height: 1.75; }
+    .guia h1, .guia h2, .guia h3 { line-height: 1.3; }
+    .guia h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    .guia h2 { margin-top: 38px; border-bottom: 2px solid #f39a28; padding-bottom: 8px; }
+    .intro-guia { font-size: 1.1rem; }
+    .tarjetas-guia { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 22px 0; }
+    .tarjeta-guia { border: 1px solid #d8dee8; border-radius: 12px; padding: 18px; background: #fff; color: #172033; }
+    .diagrama { background: #f4f7fb; border: 1px solid #d8dee8; border-radius: 12px; padding: 16px; margin: 18px 0; overflow-x: auto; }
+    .diagrama svg { display: block; width: 100%; max-width: 720px; height: auto; margin: auto; }
+    .formula { padding: 14px 18px; background: #fff5e8; border-left: 4px solid #f39a28; border-radius: 6px; overflow-wrap: anywhere; }
+    .nota-seguridad { border-left: 4px solid #c94b40; padding: 12px 16px; background: #fff1ef; border-radius: 6px; }
+    .ejercicio { margin: 16px 0; padding: 18px; border: 1px solid #d8dee8; border-radius: 10px; }
+    .ejercicio button { margin-top: 8px; cursor: pointer; padding: 9px 14px; border: 0; border-radius: 7px; background: #0b1728; color: white; }
+    .respuesta { margin-top: 10px; padding: 10px; background: #edf7ee; border-radius: 7px; }
+    .tabla-guia { width: 100%; border-collapse: collapse; margin: 18px 0; }
+    .tabla-guia th, .tabla-guia td { border: 1px solid #d8dee8; padding: 10px; text-align: left; }
+    .tabla-guia th { background: #0b1728; color: white; }
+    .volver { display: inline-block; margin-top: 25px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main class="guia">
+    <a href="index.html">← Volver a ElectroEcuador</a>
+
+    <p>GUÍA EDUCATIVA · ELECTRICIDAD BÁSICA</p>
+    <h1>Circuitos eléctricos en serie y en paralelo</h1>
+    <p class="intro-guia">
+      Aprende cómo se conectan los componentes eléctricos, cómo se comportan
+      la corriente y el voltaje, y cómo resolver ejercicios paso a paso.
+    </p>
+
+    <div class="tarjetas-guia">
+      <article class="tarjeta-guia">
+        <h3>🔗 Circuito en serie</h3>
+        <p>Los componentes se conectan uno después de otro y existe un solo camino para la corriente.</p>
+      </article>
+      <article class="tarjeta-guia">
+        <h3>🔀 Circuito en paralelo</h3>
+        <p>Los componentes se conectan en ramas diferentes y comparten los mismos dos nodos.</p>
+      </article>
+    </div>
+
+    <h2>1. ¿Qué es un circuito eléctrico?</h2>
+    <p>
+      Un circuito eléctrico es un conjunto de elementos conectados que permiten
+      el paso de la corriente cuando existe un camino cerrado. Puede incluir
+      una fuente de energía, conductores, interruptores y receptores, como
+      lámparas o resistencias.
+    </p>
+    <p>Para comprender los circuitos, recuerda estas magnitudes:</p>
+    <ul>
+      <li><strong>Voltaje (V):</strong> diferencia de potencial eléctrico entre dos puntos.</li>
+      <li><strong>Corriente (I):</strong> cantidad de carga eléctrica que circula por unidad de tiempo.</li>
+      <li><strong>Resistencia (R):</strong> oposición al paso de la corriente.</li>
+    </ul>
+    <p class="formula"><strong>Ley de Ohm:</strong> V = I × R</p>
+
+    <h2>2. Circuito en serie</h2>
+    <p>
+      En un circuito en serie, los componentes se conectan en una misma ruta.
+      La corriente que circula por cada componente es la misma. El voltaje de
+      la fuente se reparte entre las resistencias.
+    </p>
+
+    <div class="diagrama">
+      <h3>Esquema educativo de un circuito en serie</h3>
+      <svg viewBox="0 0 620 205" role="img" aria-label="Batería y dos resistencias conectadas en una sola ruta">
+        <g fill="none" stroke="#26364a" stroke-width="4" stroke-linejoin="round">
+          <path d="M90 80 H180 M250 80 H350 M420 80 H520 V160 H90 V80"/>
+          <path d="M90 100 V145 M75 108 H105 M80 120 H100" stroke="#e58b1c"/>
+          <path d="M180 80 l10 -14 l15 28 l15 -28 l15 28 l15 -14" />
+          <path d="M350 80 l10 -14 l15 28 l15 -28 l15 28 l15 -14" />
+        </g>
+        <g fill="#172033" font-size="15" font-weight="bold" text-anchor="middle">
+          <text x="215" y="48">R1</text>
+          <text x="385" y="48">R2</text>
+          <text x="90" y="183">Fuente</text>
+          <text x="310" y="193">Una sola ruta para la corriente</text>
+        </g>
+        <path d="M275 80 H320" stroke="#f39a28" stroke-width="3"/>
+        <path d="M311 72 L322 80 L311 88" fill="none" stroke="#f39a28" stroke-width="3"/>
+      </svg>
+    </div>
+
+    <h3>Características principales</h3>
+    <ul>
+      <li>La corriente es igual en todos los componentes: I = I₁ = I₂.</li>
+      <li>El voltaje total es la suma de las caídas de voltaje: Vt = V₁ + V₂.</li>
+      <li>La resistencia equivalente se obtiene sumando las resistencias.</li>
+      <li>Si una interrupción abre la única ruta, deja de circular corriente por todo el circuito.</li>
+    </ul>
+
+    <p class="formula"><strong>Resistencia equivalente en serie:</strong> Rt = R₁ + R₂ + R₃ + …</p>
+
+    <h3>Ejemplo resuelto en serie</h3>
+    <p>Una fuente de 12 V alimenta dos resistencias conectadas en serie: R₁ = 2 Ω y R₂ = 4 Ω. Calcula la resistencia total, la corriente y el voltaje en cada resistencia.</p>
+    <ol>
+      <li><strong>Resistencia total:</strong> Rt = 2 Ω + 4 Ω = 6 Ω.</li>
+      <li><strong>Corriente:</strong> I = V / Rt = 12 V / 6 Ω = 2 A.</li>
+      <li><strong>Voltaje en R₁:</strong> V₁ = I × R₁ = 2 A × 2 Ω = 4 V.</li>
+      <li><strong>Voltaje en R₂:</strong> V₂ = I × R₂ = 2 A × 4 Ω = 8 V.</li>
+    </ol>
+    <p class="formula"><strong>Comprobación:</strong> 4 V + 8 V = 12 V. El resultado coincide con el voltaje de la fuente.</p>
+
+    <h2>3. Circuito en paralelo</h2>
+    <p>
+      En un circuito en paralelo, cada componente se conecta entre los mismos
+      dos nodos, formando ramas. El voltaje es igual en todas las ramas
+      ideales, mientras que la corriente se divide entre ellas según su resistencia.
+    </p>
+
+    <div class="diagrama">
+      <h3>Esquema educativo de un circuito en paralelo</h3>
+      <svg viewBox="0 0 620 235" role="img" aria-label="Dos resistencias en ramas paralelas conectadas a una fuente">
+        <g fill="none" stroke="#26364a" stroke-width="4" stroke-linejoin="round">
+          <path d="M100 65 H230 M300 65 H500 V185 H100 V65"/>
+          <path d="M100 65 V185"/>
+          <path d="M230 65 l10 -14 l15 28 l15 -28 l15 28 l15 -14"/>
+          <path d="M230 185 l10 -14 l15 28 l15 -28 l15 28 l15 -14"/>
+          <path d="M100 100 V145 M85 108 H115 M90 120 H110" stroke="#e58b1c"/>
+        </g>
+        <g fill="#172033" font-size="15" font-weight="bold" text-anchor="middle">
+          <text x="265" y="35">R1</text>
+          <text x="265" y="155">R2</text>
+          <text x="100" y="215">Fuente</text>
+          <text x="410" y="125">Dos ramas</text>
+        </g>
+        <path d="M160 65 H205" stroke="#f39a28" stroke-width="3"/>
+        <path d="M196 57 L207 65 L196 73" fill="none" stroke="#f39a28" stroke-width="3"/>
+        <path d="M160 185 H205" stroke="#f39a28" stroke-width="3"/>
+        <path d="M196 177 L207 185 L196 193" fill="none" stroke="#f39a28" stroke-width="3"/>
+      </svg>
+    </div>
+
+    <h3>Características principales</h3>
+    <ul>
+      <li>El voltaje es el mismo en cada rama: Vt = V₁ = V₂.</li>
+      <li>La corriente total es la suma de las corrientes de las ramas: It = I₁ + I₂.</li>
+      <li>La resistencia equivalente es menor que la resistencia de cualquiera de las ramas, si todas son positivas y hay más de una rama.</li>
+      <li>Si una rama se abre, las otras ramas pueden seguir funcionando, siempre que conserven su camino eléctrico.</li>
+    </ul>
+
+    <p class="formula"><strong>Resistencia equivalente en paralelo:</strong> 1/Rt = 1/R₁ + 1/R₂ + …</p>
+    <p>Para dos resistencias también puedes usar: Rt = (R₁ × R₂) / (R₁ + R₂).</p>
+
+    <h3>Ejemplo resuelto en paralelo</h3>
+    <p>Una fuente de 12 V alimenta dos resistencias en paralelo: R₁ = 6 Ω y R₂ = 3 Ω. Calcula la resistencia equivalente y la corriente total.</p>
+    <ol>
+      <li><strong>Resistencia equivalente:</strong> Rt = (6 × 3) / (6 + 3) = 18 / 9 = 2 Ω.</li>
+      <li><strong>Corriente en R₁:</strong> I₁ = 12 V / 6 Ω = 2 A.</li>
+      <li><strong>Corriente en R₂:</strong> I₂ = 12 V / 3 Ω = 4 A.</li>
+      <li><strong>Corriente total:</strong> It = 2 A + 4 A = 6 A.</li>
+    </ol>
+    <p class="formula"><strong>Comprobación:</strong> It = V / Rt = 12 V / 2 Ω = 6 A.</p>
+
+    <h2>4. Diferencias entre serie y paralelo</h2>
+    <table class="tabla-guia">
+      <thead>
+        <tr><th>Característica</th><th>Serie</th><th>Paralelo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Camino eléctrico</td><td>Una sola ruta</td><td>Varias ramas</td></tr>
+        <tr><td>Corriente</td><td>Igual en los componentes</td><td>Se divide entre las ramas</td></tr>
+        <tr><td>Voltaje</td><td>Se reparte entre componentes</td><td>Igual en cada rama</td></tr>
+        <tr><td>Resistencia equivalente</td><td>Se suman las resistencias</td><td>Se suman los inversos</td></tr>
+        <tr><td>Interrupción de una rama</td><td>Se interrumpe toda la ruta</td><td>Las demás ramas pueden seguir funcionando</td></tr>
+      </tbody>
+    </table>
+
+    <h2>5. Ejercicios para practicar</h2>
+    <p>Resuelve primero cada ejercicio en tu cuaderno y luego pulsa el botón para comprobar tu respuesta.</p>
+
+    <div class="ejercicio">
+      <h3>Ejercicio 1 · Serie</h3>
+      <p>Dos resistencias de 5 Ω y 7 Ω están conectadas en serie a una fuente de 24 V. ¿Cuál es la resistencia total y qué corriente circula?</p>
+      <button type="button" onclick="mostrarRespuesta('respuesta1')">Ver respuesta</button>
+      <div class="respuesta" id="respuesta1" hidden>Rt = 5 + 7 = 12 Ω. I = 24 / 12 = 2 A.</div>
+    </div>
+
+    <div class="ejercicio">
+      <h3>Ejercicio 2 · Paralelo</h3>
+      <p>Dos resistencias de 4 Ω y 4 Ω se conectan en paralelo a una fuente de 8 V. ¿Cuál es la resistencia equivalente y la corriente total?</p>
+      <button type="button" onclick="mostrarRespuesta('respuesta2')">Ver respuesta</button>
+      <div class="respuesta" id="respuesta2" hidden>Rt = (4 × 4) / (4 + 4) = 2 Ω. It = 8 / 2 = 4 A. Cada rama conduce 2 A.</div>
+    </div>
+
+    <div class="ejercicio">
+      <h3>Ejercicio 3 · Comprensión</h3>
+      <p>En un circuito ideal en paralelo, si una lámpara se desconecta de su rama, ¿qué puede ocurrir con las otras lámparas?</p>
+      <button type="button" onclick="mostrarRespuesta('respuesta3')">Ver respuesta</button>
+      <div class="respuesta" id="respuesta3" hidden>Las otras pueden seguir encendidas porque sus ramas mantienen caminos eléctricos independientes, siempre que la fuente y el resto del circuito funcionen correctamente.</div>
+    </div>
+
+    <h2>6. Seguridad eléctrica</h2>
+    <div class="nota-seguridad">
+      <strong>Importante:</strong> estos ejemplos son educativos y usan circuitos ideales de baja tensión.
+      No realices pruebas con tomacorrientes ni instalaciones domésticas energizadas.
+      Las instalaciones reales deben ser revisadas y ejecutadas por personal competente,
+      con protecciones apropiadas y de acuerdo con la normativa vigente en Ecuador.
+    </div>
+
+    <h2>7. Conclusión</h2>
+    <p>
+      Comprender las conexiones en serie y en paralelo permite analizar circuitos
+      eléctricos básicos y aplicar la Ley de Ohm. Recuerda: en serie, la corriente
+      es la misma; en paralelo, el voltaje es el mismo en cada rama. Practicar con
+      ejemplos y comprobar los resultados ayuda a dominar estos conceptos.
+    </p>
+
+    <p><a href="ley-de-ohm.html">Repasar la Ley de Ohm</a></p>
+    <p><a href="magnitudes-electricas.html">Aprender las magnitudes eléctricas</a></p>
+    <p><a href="seguridad-electrica.html">Leer la guía de seguridad eléctrica</a></p>
+    <a class="volver" href="index.html">← Regresar a la página principal</a>
+  </main>
+
+  <script>
+    function mostrarRespuesta(id) {
+      const elemento = document.getElementById(id);
+      elemento.hidden = !elemento.hidden;
+    }
+  </script>
+</body>
+</html>
